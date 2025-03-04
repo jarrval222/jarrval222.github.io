@@ -1,115 +1,184 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #FFCCCC;
+    font-family: 'Verdana', sans-serif;
+    padding: 20px;
     margin: 0;
-    padding: 0;
-    background-color: #fff9e6; /* Light yellowish background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-header {
-    background: #555;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
-}
-header a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-header ul {
-    padding: 0;
-    list-style: none;
-}
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-header nav {
-    float: right;
-    margin-top: 10px;
-}
-.main-content {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-table, th, td {
-    border: 1px solid #ddd;
-}
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-th {
-    background-color: #f2f2f2;
-    color: #333;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-tr:hover {
-    background-color: #f1f1f1;
-}
+
 form {
-    background: #fff;
+    background-color: #fff;
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
-form label {
+
+fieldset {
+    border: 2px solid #FF6666;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #FFE6E6; 
+}
+
+legend {
+    font-weight: bold;
+    color: #CC0000;
+}
+
+label {
     display: block;
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 5px;
+    color: #CC0000;
 }
-form input[type="text"],
-form input[type="email"],
-form textarea {
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #FF6666;
     border-radius: 5px;
+    background-color: #FFF0F0; 
+    color: #CC0000; 
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    font-size: 1.1em;
 }
-form input[type="submit"] {
-    background: #77aaff;
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="number"]:hover,
+textarea:hover,
+select:hover {
+    transform: scale(1.01); 
+    border-color: #FF3333;
+    background-color: #FFCCCC; 
+    color: #FF3333;
+}
+
+input[type="submit"] {
+    background-color: #FF6666;
     color: #fff;
-    border: 0;
+    border: none;
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF3333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6666;
+    padding: 20px 40px; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #FF3333;
     border-radius: 5px;
 }
-form input[type="submit"]:hover {
-    background: #5599ff;
-}
+
 footer {
     text-align: center;
-    padding: 20px;
-    background: #555;
+    padding: 10px;
+    background-color: #FF6666;
     color: #fff;
+    border-radius: 5px;
     margin-top: 20px;
+    flex-shrink: 0; 
 }
-img {
-    max-width: 100%;
-    height: auto;
+
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
-.desigualdad-economica img {
-    max-width: 50%; /* Adjust the size as needed */
-    height: auto;
-    float: left;
-    margin: 0 20px 20px 0;
+
+footer a:hover {
+    color: #FF3333;
+}
+
+/* CSS para mostrar/ocultar opciones de fundación */
+#foundationOptions {
+    display: none;
+}
+
+#foundation.Sí + #foundationOptions {
+    display: block;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    form {
+        padding: 15px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+    body {
+        padding: 10px;
+    }
+    form {
+        padding: 15px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 30px; 
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
 }
