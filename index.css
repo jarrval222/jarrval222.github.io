@@ -7,10 +7,17 @@ body {
     flex-direction: column;
     min-height: 100vh; 
 }
+.header-container {
+    background: linear-gradient(to right, #c04d4d, #FF6666); /* Gradiente de rojo */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 .title {
     font-size: 2em;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     text-align: center;
     margin: 20px 0;
 }
@@ -24,7 +31,7 @@ form {
 }
 
 fieldset {
-    border: 2px solid #FF6666;
+    border: 2px solid #c74b4b;
     border-radius: 5px;
     margin-bottom: 15px;
     padding: 10px;
@@ -33,13 +40,13 @@ fieldset {
 
 legend {
     font-weight: bold;
-    color: #CC0000;
+    color: #a52e2e;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: #CC0000;
+    color: #e4140d;
 }
 
 input[type="text"],
@@ -51,12 +58,13 @@ select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #FF6666;
+    border: 1px solid #a13333;
     border-radius: 5px;
     background-color: #FFF5F5; 
-    color: #CC0000; 
+    color: #ca3e3e; 
     transition: transform 0.2s, background-color 0.2s, color 0.2s;
-    font-size: 1.1em;
+    font-size: 1.05em;
+    cursor: text;
 }
 
 input[type="text"]:hover,
@@ -65,31 +73,32 @@ input[type="tel"]:hover,
 input[type="number"]:hover,
 textarea:hover,
 select:hover {
-    transform: scale(1.01); 
+    transform: scale(1.005); 
     border-color: #FF3333;
-    background-color: #FFE6E6; 
-    color: #FF3333;
+    background-color: #fadbd0; 
+    color: #cf6b6b;
 }
 
 input[type="submit"] {
-    background-color: #FF6666;
+    background-color: #af2727;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #FF3333;
+    background-color: #942b2b;
 }
+
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF6666;
     padding: 20px 40px; 
     border-radius: 10px; 
     margin-bottom: 20px;
@@ -115,17 +124,18 @@ nav a {
     font-size: 1.2em;
     font-weight: bold;
     transition: background-color 0.2s;
+    cursor:pointer;
 }
 
 nav a:hover {
-    background-color: #FF3333;
+    background-color: #f35a5a;
     border-radius: 5px;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #FF6666;
+    background-color: #c04d4d;
     color: #fff;
     border-radius: 5px;
     margin-top: 20px;
@@ -139,7 +149,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #FF3333;
+    color: #da6161;
 }
 
 .section-box {
@@ -237,6 +247,7 @@ footer a:hover {
     margin: 20px auto; /* Centrar el bloque con la tabla */
     border-collapse: collapse;
     width: 80%; /* Ajustar el ancho de la tabla */
+    cursor: default;
 }
 
 .table-container th, .table-container td {
@@ -257,7 +268,63 @@ footer a:hover {
 .table-container tr:hover {
     background-color: #ddd;
 }
+.dynamic-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.dynamic-list li {
+    width: 48%;
+    background-color: #FFF5F5;
+    border: 1px solid #FF6666;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dynamic-list li:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.dynamic-list li:nth-child(even) {
+    align-self: flex-end;
+}
+.dynamic-list li:hover {
+    transform: scale(1.01);
+    background-color: #FFE6E6;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.section-box:hover {
+    transform: scale(1.01);
+    background-color: #fadbd0;
+}
+.welcome-box:hover {
+    transform: scale(1.01);
+    background-color: #fadbd0;
+}
+.star {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: rgb(179, 80, 50);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: star-animation 1s linear infinite;
+}
+@keyframes star-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     body {
@@ -275,6 +342,9 @@ footer a:hover {
     }
     nav li {
         margin-bottom: 10px;
+    }
+    .dynamic-list li {
+        width: 100%;
     }
 }
 
@@ -296,5 +366,8 @@ footer a:hover {
     }
     nav li {
         margin-bottom: 10px;
+    }
+    .dynamic-list li {
+        width: 100%;
     }
 }
