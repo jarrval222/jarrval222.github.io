@@ -1,5 +1,5 @@
 body {
-    background-color: #FFCCCC;
+    background-color: #F0F0F0; /* Blanco tirando a oscuro */
     font-family: 'Verdana', sans-serif;
     padding: 20px;
     margin: 0;
@@ -8,8 +8,17 @@ body {
     min-height: 100vh; 
 }
 
+.page-title {
+    text-align: center;
+    background-color: #FF3333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
 form {
-    background-color: #fff;
+    background-color: #FFE6E6;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +30,7 @@ fieldset {
     border-radius: 5px;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #FFE6E6; 
+    background-color: #FFF0F0; 
 }
 
 legend {
@@ -46,7 +55,7 @@ select {
     margin-bottom: 10px;
     border: 1px solid #FF6666;
     border-radius: 5px;
-    background-color: #FFF0F0; 
+    background-color: #FFF5F5; 
     color: #CC0000; 
     transition: transform 0.2s, background-color 0.2s, color 0.2s;
     font-size: 1.1em;
@@ -60,7 +69,7 @@ textarea:hover,
 select:hover {
     transform: scale(1.01); 
     border-color: #FF3333;
-    background-color: #FFCCCC; 
+    background-color: #FFE6E6; 
     color: #FF3333;
 }
 
@@ -106,6 +115,7 @@ nav a {
     text-decoration: none;
     padding: 10px 20px;
     font-size: 1.2em;
+    font-weight: bold;
     transition: background-color 0.2s;
 }
 
@@ -127,10 +137,62 @@ footer {
 footer a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
     color: #FF3333;
+}
+
+.section-box {
+    border: 2px solid #FF6666;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #FFF5F5; /* Blanco pastel */
+    color: #CC0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+}
+
+.section-box a {
+    color: #CC0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-box a:hover {
+    color: #FF3333;
+}
+
+.section-box:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-box {
+    background-color: #FFF5F5; /* Blanco pastel */
+    border: 2px solid #FF6666;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: #CC0000;
+}
+
+.welcome-box h2,
+.welcome-box p {
+    color: #CC0000;
+}
+
+.welcome-box a {
+    color: #CC0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.welcome-box a:hover {
+    color: #FF3333;
+}
+
+.welcome-box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* CSS para mostrar/ocultar opciones de fundación */
