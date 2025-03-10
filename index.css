@@ -7,14 +7,12 @@ body {
     flex-direction: column;
     min-height: 100vh; 
 }
-
-.page-title {
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
     text-align: center;
-    background-color: #FF3333;
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 form {
@@ -153,8 +151,27 @@ footer a:hover {
     color: #CC0000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s;
+    width: 60%;
+    margin: 20PX auto;
+    box-sizing: border-box;
 }
 
+.section-box img {
+    width: 18%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-box-container {
+    text-align: center;
+}
+
+.section-box-container img {
+    margin: 20px 0;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .section-box a {
     color: #CC0000;
     text-decoration: none;
@@ -174,6 +191,11 @@ footer a:hover {
     border: 2px solid #FF6666;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     color: #CC0000;
+    width: calc(100% - 2%); /* Ajustar el ancho para dejar margen */
+    text-align: center;
+    margin: 0 1% 20px 1%; /* Margen igual a izquierda y derecha */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .welcome-box h2,
@@ -202,6 +224,38 @@ footer a:hover {
 
 #foundation.Sí + #foundationOptions {
     display: block;
+}
+.img-left {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 15%; /* Reducir el tamaño de la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    margin: 20px auto; /* Centrar el bloque con la tabla */
+    border-collapse: collapse;
+    width: 80%; /* Ajustar el ancho de la tabla */
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container tr:hover {
+    background-color: #ddd;
 }
 
 /* Responsive styles for mobile */
