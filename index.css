@@ -13,6 +13,22 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
+    
+}
+.logo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.inline {
+    display: flex;
+}
+
+.row {
+    display: grid;
+    gap: 5px;
 }
 
 .title {
