@@ -384,6 +384,7 @@ ul {
     .img-left {
         float: center;
 }
+}
 
 /* Responsive styles for tablets */
 @media (max-width: 1024px) {
