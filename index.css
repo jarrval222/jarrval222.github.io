@@ -14,6 +14,7 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+
 .title {
     font-size: 2em;
     font-weight: bold;
@@ -134,12 +135,13 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #c04d4d;
+    padding: 20px;
+    background-color: #FF6666;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 20px;
     flex-shrink: 0; 
+    font-size: 1.1em;
 }
 
 footer a {
@@ -149,7 +151,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #da6161;
+    color: #d44949;
 }
 
 .section-box {
